@@ -41,6 +41,7 @@ def init():
     # 소년과 볼 사이의 충돌 페어를 등록
     game_world.add_collision_pair("boy:ball", boy, None)
     game_world.add_collision_pair("grass:ball", grass, None)
+    game_world.add_collision_pair("zombie:boy", None, boy)
 
     global zombies
     zombies = [Zombie() for _ in range(4)]
@@ -48,6 +49,7 @@ def init():
 
     for zombie in zombies:
         game_world.add_collision_pair("zombie:ball", zombie, None)
+        game_world.add_collision_pair("zombie:boy", zombie, None)
 
     for ball in balls:
         game_world.add_collision_pair("boy:ball", None, ball)
