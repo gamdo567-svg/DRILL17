@@ -58,4 +58,5 @@ class Zombie:
     
     def handle_collision(self, group, other):
         if group == "zombie:ball" and not other.stopped:
-            print('hit by ball\n\n')
+            print("좀비와 공 충돌")
+            game_world.remove_object(other)

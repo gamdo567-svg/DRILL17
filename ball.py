@@ -58,5 +58,5 @@ class Ball:
         elif group == "zombie:ball":
             if self.stopped:
                 return
-            print("움직이는공히트")
+          
         
