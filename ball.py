@@ -23,6 +23,7 @@ class Ball:
         self.velocity_y = LAUNCH_SPEED_Y
         self.radius = 10.5 if ball_type == 1 else 20.5
         self.stopped = (direction == 0)  # direction 이 0이면 바닥에 놓인 공
+        self.direction = direction
 
     def update(self):
         if self.stopped:
@@ -55,5 +56,7 @@ class Ball:
             self.velocity_y = 0
             self.stopped = True
         elif group == "zombie:ball":
-            print("공히트")
+            if self.stopped:
+                return
+            print("움직이는공히트")
         
