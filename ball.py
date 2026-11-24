@@ -54,3 +54,6 @@ class Ball:
             self.velocity_x = 0
             self.velocity_y = 0
             self.stopped = True
+        elif group == "zombie:ball":
+            print("공히트")
+        
